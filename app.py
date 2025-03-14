@@ -22,7 +22,7 @@ image_path = os.path.join(os.path.dirname(__file__), "home.png")
 
 # Check if the image exists
 if os.path.exists(image_path):
-    st.image(image_path, use_column_width=True)
+    st.image(image_path, use_container_width=True)
 else:
     st.error("Image file not found! Please check the path.")
 
