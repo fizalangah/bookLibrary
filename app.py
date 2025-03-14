@@ -16,16 +16,9 @@ menu = st.sidebar.selectbox(
     [ "Home","Add a Book", "Display All Books", "Remove a Book", "Search a Book", "Display Statistics"]
 )
 if menu == "Home":
-    st.write("Welcome to your Personal Library Manager! Select an option from the sidebar."),
-   # Get the absolute path of the image
-image_path = os.path.join(os.path.dirname(__file__), "home.png")
-
-# Check if the image exists
-if os.path.exists(image_path):
-    st.image(image_path, use_container_width=True)
-else:
-    st.error("Image file not found! Please check the path.")
-
+   st.subheader("🏠 Welcome to Personal Library Manager!")
+   st.image("home.png", use_container_width=True)
+   st.write("Select an option from the sidebar to get started.")
 # ✅ 1. Add a Book
 if menu == "Add a Book":
     st.subheader("➕ Add a New Book")
