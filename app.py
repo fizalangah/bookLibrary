@@ -13,14 +13,14 @@ st.title("📚 Personal Library Manager")
 # 🔥 Sidebar Menu
 menu = st.sidebar.selectbox(
     "Select an Option", 
-    [ "🏡 Home"," 📖 Add a Book", " 📚 Display All Books", " ❌ Remove a Book", " 🔎 Search a Book", " 📊 Display Statistics"]
+    [ "🏡 Home","📖 Add a Book", "📚 Display All Books", "❌ Remove a Book", "🔎 Search a Book", "📊 Display Statistics"]
 )
 if menu == "🏡 Home":
    st.subheader("🏠 Welcome to Personal Library Manager!")
    st.image("home.jpg",use_container_width=True)
    st.write("Select an option from the sidebar to get started.")
 # ✅ 1. Add a Book
-if menu == " 📖 Add a Book":
+if menu == "📖 Add a Book":
     st.subheader("➕ Add a New Book")
 
     book_Name = st.text_input("Enter the name of the book:")
@@ -41,7 +41,7 @@ if menu == " 📖 Add a Book":
         st.success("✅ Book added successfully!")
 
 # ✅ 2. Display All Books
-elif menu == " 📚 Display All Books":
+elif menu == "📚 Display All Books":
     st.subheader("📖 Library Collection")
     books = get_all_books()
     
@@ -54,7 +54,7 @@ elif menu == " 📚 Display All Books":
             st.markdown("---")
 
 # ✅ 3. Remove a Book
-elif menu == " ❌ Remove a Book":
+elif menu == "❌ Remove a Book":
     st.subheader("❌ Remove a Book")
     book_Name = st.text_input("Enter the name of the book to remove:")
 
@@ -66,7 +66,7 @@ elif menu == " ❌ Remove a Book":
             st.error("⚠️ Book not found in the library.")
 
 # ✅ 4. Search for a Book
-elif menu == " 🔎 Search a Book":
+elif menu == "🔎 Search a Book":
     st.subheader("🔍 Search for a Book")
     book_Name = st.text_input("Enter the name of the book to search:")
 
@@ -79,7 +79,7 @@ elif menu == " 🔎 Search a Book":
             st.error("⚠️ Book not found.")
 
 # ✅ 5. Display Statistics
-elif menu == " 📊 Display Statistics":
+elif menu == "📊 Display Statistics":
     st.subheader("📊 Library Statistics")
     total_books, read_books, read_percentage = get_statistics()
 
