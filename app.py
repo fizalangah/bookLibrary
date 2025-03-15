@@ -17,7 +17,7 @@ menu = st.sidebar.selectbox(
 )
 if menu == " 🏡 Home":
    st.subheader("🏠 Welcome to Personal Library Manager!")
-   st.image("home.png", use_container_width=True)
+   st.image("home.png",use_container_width=True)
    st.write("Select an option from the sidebar to get started.")
 # ✅ 1. Add a Book
 if menu == " 📖 Add a Book":
