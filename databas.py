@@ -2,12 +2,11 @@ import os
 from pymongo import MongoClient
 from dotenv import load_dotenv
 
-# ✅ Load environment variables
 load_dotenv()
 
 # ✅ Get MongoDB URI from .env file
 MONGO_URI = os.getenv("MONGO_URI")
-
+print(MONGO_URI)
 # ✅ MongoDB Connection
 client = MongoClient(MONGO_URI)
 db = client["library_manager"]
